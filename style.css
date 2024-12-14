@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: serif;
+    font-weight:600;   
+    color: rgba(0, 0, 0, 0.68);
+}
+html{
+    font-size: 95%;
+    background-color: #838080;
+
+}
+#input-field::placeholder{
+    color: rgba(0, 0, 0, 0.68);
+}
+
+input:focus-visible{
+    outline: .1rem solid orange;
+
+}
+input[type="text"]{
+    background-color: lightgray;
+    border: none;
+    height: 2rem;
+    padding-left: .5rem;
+    border-radius: 3px;
+    font-size: 1.1rem;
+ 
+}
+input[type="date"]{
+    background-color: lightgray;
+    border: none;
+    height: 2rem;
+    padding-left: .5rem;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 5rem;
+   & .cntainer{
+    box-shadow: 1px 1px 1px 10px rgb(255, 179, 2);
+    background-color: rgb(250, 119, 141);
+    padding: 2rem 0.5rem;
+    text-align: center;
+    border-radius: 3px;
+    & .to-do-container{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        & input{
+            margin-right: 1rem;
+        }
+        & button{
+            padding: 2px 15px 2px 15px;
+            background-color: lightgray;
+            border: none;
+            height: 2rem;
+            border-radius: 3px;
+            font-size: 1.1rem;
+            transition: all .2s linear;
+            &:hover{
+                opacity: .7;
+                cursor: pointer;
+                background-color: black;
+                color: white;
+            }
+        }
+        & .per-item{
+           display: flex;
+           justify-content: space-between;
+        }
+        & .box01, .box02{
+          
+            display: grid;
+            grid-template-columns: 1fr 1fr .5fr;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        & span{
+            text-align: start;
+            background-color: lightgray;
+            border: none;
+            padding-left: .5rem;
+            padding-top: .5rem;
+            border-radius: 3px;
+            margin-right: 1rem;
+            
+        }
+       
+    }
+   }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    html {
+        font-size: 80%;
+    }
+    .cntainer {
+        width: 98%;
+        min-height: 20rem;
+        
+    }
+    button{
+         min-width: 7rem;
+      }
+    #form-value{
+        padding: 0rem 3rem 0rem 3rem;
+    }
+}
